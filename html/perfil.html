@@ -76,11 +76,11 @@
                 </div>
 
 
-                <div id="dados_perfil" class="row g-3 justify-content-center alig align-items-center flex-wrap position-relative">
+                <form id="form_dados_perfil" method="post" class="row g-3 justify-content-center alig align-items-center flex-wrap position-relative">
 
                     <img class="col-12 icon_grogu img img-fluid rounded-circle p-0" src="../fotos/icon_perfil.jpeg" alt="Icone Yoda">
 
-                    <div class="col-md-12 dados">
+                    <div class="col-md-6 dados">
                         <label class="fw-bold" for="nome">Nome</label>
                         <input class="form-control border-0 rounded py-2 shadow" type="text" placeholder="Nome" name="nome" id="nome">
                     </div>
@@ -101,17 +101,21 @@
                         <input class="form-control border-0 rounded py-2 shadow" placeholder="(00) 00000-0000" type="tel" name="telefone" id="telefone">
                     </div>
                     <div class="col-md-6 dados">
-                        <label class="fw-bold" for="senha">Senha</label>
-                        <input class="form-control border-0 rounded py-2 shadow" type="password" name="senha" id="senha">
+                        <label class="fw-bold" for="senha_dados_nova">Nova Senha</label>
+                        <input class="form-control border-0 rounded py-2 shadow" type="password" name="senha_dados_nova" id="senha_dados_nova">
                     </div>
-                    <div class="col-md-6 dados">
-                        <label class="fw-bold" for="senha_confirmacao">Confirmar senha</label>
-                        <input class="form-control border-0 rounded py-2 shadow" type="password" name="senha_confirmacao" id="senha_confirmacao">
+                    <div class="col-md-6 dados mt-5">
+                        <label class="fw-bold" for="senha_dados">Senha</label>
+                        <input class="form-control border-0 rounded py-2 shadow" type="password" name="senha_dados" id="senha_dados">
+                    </div>
+                    <div class="col-md-6 dados mt-5">
+                        <label class="fw-bold" for="senha_dados_confirmacao">Confirmar senha</label>
+                        <input class="form-control border-0 rounded py-2 shadow" type="password" name="senha_dados_confirmacao" id="senha_dados_confirmacao">
                     </div>
 
-                    <button class="btn-update rounded-pill mt-5 py-3">Atualizar dados</button>
+                    <button type="submit" class="btn-update rounded-pill mt-5 py-3">Atualizar dados</button>
 
-                </div>
+                </form>
 
                 <h3 class="text-center mt-5">Histórico de compras</h3>
                 <div id="produtos" class="d-flex justify-content-center alig align-items-center flex-wrap">
@@ -124,6 +128,9 @@
     </div>
     <script src="../js/verifica_token.js"></script>
     <script src="../js/logout.js"></script>
+    <script src="../js/gerador_de_data_formatada.js"></script>
+    <script src="../js/gerador_de_idade.js"></script>
+    <script src="../js/atualiza_cadastro.js"></script>
     <script src="../js/busca_produtos.js"></script>
 </body>
 </html>

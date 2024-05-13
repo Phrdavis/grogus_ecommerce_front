@@ -65,6 +65,7 @@ $(formData).on('submit', function(e) {
 
         localStorage.setItem('token', data)
         localStorage.setItem('email_user', token_decoded.sub);
+        localStorage.setItem('id_user', token_decoded.userId);
 
         window.location.href = 'inicio_catalogo.html';
     })
@@ -82,5 +83,10 @@ function decodeJwtToken(token) {
     
     const payloadBase64 = tokenParts[1];
     const decodedPayload = atob(payloadBase64);
-    return JSON.parse(decodedPayload);
+    const payload = JSON.parse(decodedPayload);
+
+    return {
+        userId: payload.id, 
+        sub: payload.sub 
+    };
 }
