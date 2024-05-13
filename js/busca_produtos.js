@@ -11,7 +11,7 @@ $(document).ready(function() {
             'Autorization': 'Bearer ' + token_autentication
         }
     };
-    const url = 'http://localhost:6060/api/v1/produtos/notas';
+    const url = 'http://localhost:6060/api/v1/produtos';
 
     fetch(url, requestOptions)
     .then(data =>{
