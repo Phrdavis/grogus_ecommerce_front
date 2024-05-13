@@ -25,7 +25,7 @@ The Grogus E-commerce website is a platform for selling various products online.
 
 Once the application is on live, you can see the Login interface on your browser. Click on `Ainda não possui cadastro?` and fill in your information. 
 
-**EXTREMY NECESSARY WARNING BECAUSE I WANT**
+:warning: **WARNING:**
 Don't worry, you can put fake information in the form if you want, no data will be colected from this application.
 
 ## Contributing
