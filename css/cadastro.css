@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+}
+
+#form_cadastro_usuario{
+
+    background-color: #2f2841;
+    border-radius: 20px;
+    max-width: 30em;
+
+}
+
+#form_cadastro_usuario > h3 {
+    color: #f0ffffde;
+}
+
+
+.main-cadastro{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.btn-login {
+    width: 100%;
+    border: none;
+    font-size: 1em;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color:#2f2841;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 0px 55px 0px #05944cf4;
+}
+
+
+#form_cadastro_usuario input {
+    background-color: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-sizing: border-box;
+    margin-top: 1em;
+}
+

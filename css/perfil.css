@@ -1,0 +1,93 @@
+.main-perfil{
+
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    background: #201b2c;
+
+}
+.greeting{
+
+    max-width: 30em;
+    margin: auto;
+    
+}
+.greeting strong{
+
+    color: #00ff88;
+    text-shadow: 0px 0px 50px #05944cf4;
+    font-size: 1em;
+    z-index: 1;
+    
+}
+.greeting h1{
+
+    color: #f0ffff60;
+    font-size: 0.8em;
+
+}
+
+.icon_grogu{
+
+    max-width: 8em!important;
+    height: auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0%;
+    left: 50%;
+    z-index: 0;
+    border: #201b2c 10px solid;
+
+}
+
+#dados_perfil{
+
+    width: 100%;
+    height: auto;
+    max-width: 40em;
+    margin: auto;
+    margin-top: 5em;
+    border-radius: 1em;
+    background-color: #2f2841;
+    padding: 5em 2em 2em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.dados label {
+    color: #f0ffffde;
+    font-size: 12pt;
+}
+
+.dados input {
+    background-color: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-sizing: border-box;
+}
+.btn-update {
+    width: 100%;
+    border: none;
+    font-size: 1em;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color:#2f2841;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 0px 55px 0px #05944cf4;
+}
+
+.perfil{
+
+    margin: auto;
+    max-width: 90em;
+
+}
+.perfil h3{
+
+    color: #f0ffffde;
+
+}

@@ -1,0 +1,74 @@
+body{
+
+    background: #201b2c!important;
+
+}
+
+.main-catalogo{
+
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    background: #201b2c;
+
+}
+
+.catalogo{
+
+    color: #f0ffffde;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 90em;
+    margin: auto;
+
+}
+
+.card{
+
+    padding: 1em 0;
+
+}
+
+.card:hover{
+
+    cursor: pointer;
+
+}
+
+.img-card{
+
+    opacity: 75%;
+    height: 100%;
+    max-height: 10em;
+    object-fit: contain;
+    transition: all 0.1s;
+
+}
+
+.img-fundo{
+
+    background-color: #2f2841;
+    
+}
+
+.banner{
+
+    height: 100%;
+    max-height: 40em;
+    object-fit: contain;
+
+}
+
+
+.img-card:hover{
+
+    opacity: 100%;
+    transition: all 0.1s;
+
+}
+
+.pix{
+
+    font-size: 0.6em;
+
+}
