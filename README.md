@@ -2,13 +2,13 @@
 
 This repository contains the HTML code for the Grogus E-commerce website.
 
-## Table of Contents
+## Technologies 
 
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Jquery
 
 ## Description
 
@@ -31,6 +31,10 @@ Don't worry, you can put fake information in the form if you want, no data will 
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ## Project Specifications
 
