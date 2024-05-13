@@ -1,4 +1,4 @@
-# grogus_ecommerce_html
+# Grogu's E-commerce Front-End
 
 This repository contains the HTML code for the Grogus E-commerce website.
 
