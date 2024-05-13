@@ -4,11 +4,7 @@ This repository contains the HTML code for the Grogus E-commerce website.
 
 ## Technologies 
 
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
-- Jquery
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,bootstrap,jquery)](https://skillicons.dev)
 
 ## Description
 
