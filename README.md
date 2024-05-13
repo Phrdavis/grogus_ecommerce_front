@@ -23,10 +23,12 @@ The Grogus E-commerce website is a platform for selling various products online.
 
 ## Usage
 
+In the first moment, you will need to access the [Grogu E-commerce Back-End](https://github.com/Phrdavis/grogus_ecommerce) and following the steps to run the Java Server API.
+
 Once the application is on live, you can see the Login interface on your browser. Click on `Ainda não possui cadastro?` and fill in your information. 
 
 :warning: **WARNING:**
-Don't worry, you can put fake information in the form if you want, no data will be colected from this application.
+Don't worry, you can put fake information in the form if you want, no data will be colected from this application. Only the password needs to contain more than 8 caracters, upper case, lower case and a number
 
 ## Contributing
 
