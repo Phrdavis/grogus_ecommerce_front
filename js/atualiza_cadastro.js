@@ -104,7 +104,7 @@ $(formData).on('submit', function(e) {
     .then(data => {
 
         alert(data);
-        window.location.href = 'index.html';
+        location.reload;
     })
     .catch(error => {
         console.log(error);
