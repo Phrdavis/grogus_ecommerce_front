@@ -47,8 +47,16 @@ body{
 
 .img-fundo{
 
+    height: 100%;
+    max-height: 25em;
     background-color: #2f2841;
     
+}
+.img-fluid{
+
+    max-height: 25em;
+    object-fit: contain
+
 }
 
 .banner{
