@@ -3,7 +3,9 @@ var dt_nascimento = $('#dt_nascimento');
 var cpf = $('#cpf');
 var email = $('#email');
 var telefone = $('#telefone');
+var nome_titulo = $('.nome_titulo')
 var id = localStorage.getItem('id_user');
+
 
 $(document).ready(function() {
     
@@ -29,6 +31,7 @@ $(document).ready(function() {
     .then(data => {
 
         console.log(data);
+        nome_titulo.html(data.nome)
         nome.val(data.nome);
         dt_nascimento.val(data.dataNascimento);
         cpf.val(data.cpf);
