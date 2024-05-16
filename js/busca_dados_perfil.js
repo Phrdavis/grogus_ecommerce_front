@@ -1,19 +1,19 @@
-const nome = $('#nome');
-const dt_nascimento = $('#dt_nascimento');
-const cpf = $('#cpf');
-const email = $('#email');
-const telefone = $('#telefone');
-const id = localStorage.getItem('id_user');
+var nome = $('#nome');
+var dt_nascimento = $('#dt_nascimento');
+var cpf = $('#cpf');
+var email = $('#email');
+var telefone = $('#telefone');
+var id = localStorage.getItem('id_user');
 
 $(document).ready(function() {
     
-    const requestOptions = {
+    var requestOptions = {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         }
     };
-    const url = `http://localhost:6060/api/v1/usuarios/${id}`;
+    var url = `http://localhost:6060/api/v1/usuarios/${id}`;
 
     fetch(url, requestOptions)
     .then(response => {
@@ -30,7 +30,7 @@ $(document).ready(function() {
 
         console.log(data);
         nome.val(data.nome);
-        dt_nascimento.val(data.nascimento);
+        dt_nascimento.val(data.dataNascimento);
         cpf.val(data.cpf);
         email.val(data.email);
         telefone.val(data.telefone);

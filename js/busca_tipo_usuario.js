@@ -7,18 +7,18 @@ async function buscaTipoUsuario(nome){
 
     }
 
-    const requestOptions = {
+    var requestOptions = {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         }
     };
-    const url = `http://localhost:6060/api/v1/tipos_usuario/${nome}`;
+    var url = `http://localhost:6060/api/v1/tipos_usuario/${nome}`;
 
 
     try{
 
-        const response = await fetch(url, requestOptions);
+        var response = await fetch(url, requestOptions);
 
         if(response.status == 200){
 
@@ -38,7 +38,7 @@ async function buscaTipoUsuario(nome){
 async function handleSearch(nome){
     
     try {
-        const tipo_usuario = await buscaTipoUsuario(nome);
+        var tipo_usuario = await buscaTipoUsuario(nome);
         return tipo_usuario;
     } catch (error) {
         console.error('Erro ao buscar tipo de usuário:', error.message);

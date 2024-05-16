@@ -1,11 +1,11 @@
-const formData = $('#form_cadastro_usuario');
-const senha_cadastro_input = $("input[name='senha_cadastro']");
-const senha_cadastro_confirmacao_input = $("input[name='senha_cadastro_confirmacao']");
+var formData = $('#form_cadastro_usuario');
+var senha_cadastro_input = $("input[name='senha_cadastro']");
+var senha_cadastro_confirmacao_input = $("input[name='senha_cadastro_confirmacao']");
 var dataAtual;
 
 $(document).ready(function() {
 
-    const date_input = $("input[name='dt_nascimento']");
+    var date_input = $("input[name='dt_nascimento']");
     dataAtual = dataAtualFormatada();
 
     date_input.attr('min', '1900-01-01');
@@ -13,19 +13,17 @@ $(document).ready(function() {
 
 })
 
-const tipo_usuario = handleSearch('Cliente')
+var tipo_usuario = handleSearch('Cliente')
 .then(data=>{
     $(formData).on('submit', function(e){
     
         e.preventDefault();
     
-        const formData = new FormData(this);
+        var formData = new FormData(this);
     
         var senha_cadastro = formData.get('senha_cadastro');
         var senha_cadastro_confirmacao = formData.get('senha_cadastro_confirmacao');
         var dt_nascimento = formData.get('dt_nascimento'); 
-    
-        var idade = gerarIdade(dt_nascimento, dataAtual);
     
         var regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         if(!regex.test(senha_cadastro) || senha_cadastro.length < 8) {
@@ -50,7 +48,7 @@ const tipo_usuario = handleSearch('Cliente')
         var dados = {
     
             nome: formData.get('nome'),
-            idade: idade,
+            data_nascimento: dt_nascimento,
             cpf: formData.get('cpf'),
             email: formData.get('email'),
             telefone: formData.get('telefone'),
@@ -60,14 +58,14 @@ const tipo_usuario = handleSearch('Cliente')
     
         }   
     
-        const requestOptions = {
+        var requestOptions = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(dados) // Convertendo o objeto em JSON
         };
-        const url = 'http://localhost:6060/api/v1/usuarios/cadastrar';
+        var url = 'http://localhost:6060/api/v1/usuarios/cadastrar';
     
     
         fetch(url, requestOptions)

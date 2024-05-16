@@ -1,17 +1,17 @@
-const produtos_div = document.getElementById('produtos');
+var produtos_div = document.getElementById('produtos');
 
 $(document).ready(function() {
 
     var token_autentication = localStorage.getItem('token');
 
-    const requestOptions = {
+    var requestOptions = {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
             'Autorization': 'Bearer ' + token_autentication
         }
     };
-    const url = 'http://localhost:6060/api/v1/produtos';
+    var url = 'http://localhost:6060/api/v1/produtos';
 
     fetch(url, requestOptions)
     .then(data =>{
@@ -29,9 +29,7 @@ $(document).ready(function() {
     })
     .then(response =>{
 
-        console.log('Resposta da API:', response);
-
-
+        
         response.forEach(produto => {
 
             var preco_parcela = (produto.preco/10).toFixed(2).replace('.',',');

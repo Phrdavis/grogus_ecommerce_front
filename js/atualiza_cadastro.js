@@ -1,13 +1,13 @@
-const formData = $('#form_dados_perfil');
-const senha_dados_input = $("input[name='senha_dados']");
-const senha_dados_confirmacao_input = $("input[name='senha_dados_confirmacao']");
+var formData = $('#form_dados_perfil');
+var senha_dados_input = $("input[name='senha_dados']");
+var senha_dados_confirmacao_input = $("input[name='senha_dados_confirmacao']");
 var dataAtual;
 
 var id_user = localStorage.getItem('id_user');
 
 $(document).ready(function() {
 
-    const date_input = $("input[name='dt_nascimento']");
+    var date_input = $("input[name='dt_nascimento']");
     dataAtual = dataAtualFormatada();
 
     date_input.attr('min', '1900-01-01');
@@ -19,14 +19,12 @@ $(formData).on('submit', function(e) {
 
     e.preventDefault();
 
-    const formData = new FormData(this);
+    var formData = new FormData(this);
 
     var senha_dados = formData.get('senha_dados');
     var senha_dados_confirmacao = formData.get('senha_dados_confirmacao');
     var senha_dados_nova = formData.get('senha_dados_nova');
     var dt_nascimento = formData.get('dt_nascimento'); 
-
-    var idade = gerarIdade(dt_nascimento, dataAtual);
 
     var regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if(!regex.test(senha_dados) || senha_dados.length < 8) {
@@ -70,26 +68,25 @@ $(formData).on('submit', function(e) {
 
         id: id_user,
         nome: formData.get('nome'),
-        idade: idade,
+        dataNascimento: dt_nascimento,
         cpf: formData.get('cpf'),
         email: formData.get('email'),
         telefone: formData.get('telefone'),
-        senha: senha,
-        ativo: true,
-        tipo: {id : 1}
+        senha: senha
 
     }   
 
-    const requestOptions = {
+    var requestOptions = {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(dados) // Convertendo o objeto em JSON
     };
-    const url = 'http://localhost:6060/api/v1/usuarios/atualizar';
+    var url = 'http://localhost:6060/api/v1/usuarios/atualizar';
 
 
+    console.log(dados);
     fetch(url, requestOptions)
     .then(response => {
 

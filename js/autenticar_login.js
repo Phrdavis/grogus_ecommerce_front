@@ -1,11 +1,11 @@
-const formData = $('#form_autentica_usuario');
+var formData = $('#form_autentica_usuario');
 
 $(formData).on('submit', function(e) {
 
     console.log('Formulário enviado!');
     e.preventDefault();
 
-    const formData = new FormData(this);
+    var formData = new FormData(this);
 
     var email = formData.get('usuario');
     var senha = formData.get('senha');
@@ -34,14 +34,14 @@ $(formData).on('submit', function(e) {
 
     }
 
-    const requestOptions = {
+    var requestOptions = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(dados) // Convertendo o objeto em JSON
     };
-    const url = 'http://localhost:6060/api/v1/usuarios/login';
+    var url = 'http://localhost:6060/api/v1/usuarios/login';
 
 
     fetch(url, requestOptions)
@@ -60,12 +60,12 @@ $(formData).on('submit', function(e) {
     })
     .then(data => {
         console.log('Resposta da API:', data);
-        const token_decoded  = decodeJwtToken(data);
-        console.log('Token decodificado:', token_decoded);
+        var token_decoded  = decodeJwtToken(data);
 
         localStorage.setItem('token', data)
         localStorage.setItem('email_user', token_decoded.sub);
         localStorage.setItem('id_user', token_decoded.userId);
+        localStorage.setItem('tipo_user', token_decoded.userTipo);
 
         window.location.href = 'inicio_catalogo.html';
     })
@@ -76,17 +76,18 @@ $(formData).on('submit', function(e) {
 })
 
 function decodeJwtToken(token) {
-    const tokenParts = token.split('.');
-    if (tokenParts.length !== 3) {
-        throw new Error('Token JWT inválido');
-    }
+    var tokenParts = token.split('.');
+    // if (tokenParts.length !== 3) {
+    //     throw new Error('Token JWT inválido');
+    // }
     
-    const payloadBase64 = tokenParts[1];
-    const decodedPayload = atob(payloadBase64);
-    const payload = JSON.parse(decodedPayload);
+    var payloadBase64 = tokenParts[1];
+    var decodedPayload = atob(payloadBase64);
+    var payload = JSON.parse(decodedPayload);
 
     return {
         userId: payload.id, 
+        userTipo: payload.tipo, 
         sub: payload.sub 
     };
 }

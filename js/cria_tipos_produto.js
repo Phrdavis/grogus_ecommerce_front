@@ -1,6 +1,6 @@
-var dados = ['Cliente', 'Funcionario', 'Administrador']
+var dados = ['Mouse', 'Computador', 'Headset', 'Gabinete']
 
-var url = 'http://localhost:6060/api/v1/tipos_usuario';
+var url = 'http://localhost:6060/api/v1/tipos_produto';
 
 dados.forEach(tipo => {
 
