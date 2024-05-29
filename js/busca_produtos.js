@@ -34,8 +34,8 @@ $(document).ready(function() {
 
             var preco_parcela = (produto.preco/10).toFixed(2).replace('.',',');
 
-            var card = $("<a class='card mt-3 mx-3 text-decoration-none' style='max-width: 15em;max-height: 26em;'></a>");
-            var card_img = $(`<img class='card-img-top img-card' src='${produto.imagem}' alt='Imagem do produto'>`);
+            var card = $(`<a href='dados_produto.html?${produto.nome}' class='card mt-3 mx-3 text-decoration-none' style='max-width: 15em;max-height: 26em;'></a>`);
+            var card_img = $(`<img class='card-img-top img-card' src='${produto.imagem}' alt='${produto.imagem}'>`);
             var card_body = $("<div class='card-body'></div>");
             var card_title = $(`<h5 class='card-title overflow-y-hidden' style='max-height: 6em'>${produto.nome}</h5>`);
             var card_preco = $(`<p class='card-text mb-0 mt-4 text-success fw-bolder fs-3'>R$ ${produto.preco}</p>`);
