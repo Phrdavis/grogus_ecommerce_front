@@ -2,16 +2,16 @@
 
 $(document).on('load', function(){
 
-    const logout_btn = $("a[name='logout']");
+    const logout_btn = document.getElementById('logout');
 
     
-    logout_btn.on('click', function() {
-    
-        localStorage.removeItem('token');
-        localStorage.removeItem('email');
-    
-        window.location.href = 'index.html';
-    
+    logout_btn.addEventListener('click', function(e){
+        
+            localStorage.removeItem('token');
+            localStorage.removeItem('email');
+        
+            window.location.href = 'index.html';
+
     })
 
 })
