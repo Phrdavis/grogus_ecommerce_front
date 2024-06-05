@@ -1,0 +1,37 @@
+body{
+
+    background: #201b2c!important;
+
+}
+
+.main-produto{
+
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    background: #201b2c;
+
+}
+.product-area{
+
+    width: 100%;
+    max-width: 73em;
+    height: auto;
+    margin-top: 3em;
+    background-color: #2f2841;
+
+}
+
+.container-img{
+
+    width: 50%;
+    max-width: 30em;
+    height: 100%;
+
+}
+
+#img-principal{
+
+    width: 100%;
+
+}

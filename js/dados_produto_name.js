@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     const urlParams = new URLSearchParams(window.location.search);
     const produto = urlParams.get('produto')
+    const img_product = $('#img-principal');
 
     var token_autentication = localStorage.getItem('token');
 
@@ -31,7 +32,8 @@ $(document).ready(function() {
     })
     .then(response =>{
 
-        
+
+        img_product.attr('src', response.imagem)
         console.log(response)
 
     })
