@@ -4,6 +4,10 @@ $(document).ready(function() {
     const urlParams = new URLSearchParams(window.location.search);
     const produto = urlParams.get('produto')
     const img_product = $('#img-principal');
+    const nome_produto = $('#nome_produto');
+    const preco_produto = $('#preco_produto');
+    const descricao_produto = $('#descricao_produto');
+    const id_produto = $('#id_produto');
 
     var token_autentication = localStorage.getItem('token');
 
@@ -34,6 +38,10 @@ $(document).ready(function() {
 
 
         img_product.attr('src', response.imagem)
+        nome_produto.html(response.nome)
+        preco_produto.append(response.preco)
+        descricao_produto.html(response.nome)
+        id_produto.val(response.id)
         console.log(response)
 
     })

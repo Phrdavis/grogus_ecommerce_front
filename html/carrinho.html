@@ -21,40 +21,25 @@
 
         <div class="container-fluid p-0 px-4 text-light" style="height: 100%;">
         
-            <div class="product-area d-flex justify-content-center align-itens-center m-auto mt-5 rounded">
+            <h1 class="mt-5 text-center">Estoque </h1>
+            <div class="d-flex justify-content-center align-itens-center m-auto mt-5 rounded">
 
-                <div class="container-img">
+                
 
-                    <img class="rounded" id="img-principal" src="#" alt="Produto imagem">
+                <div id="produtos" class="d-flex justify-content-center alig align-items-center flex-wrap">
+                    
 
                 </div>
-
-                <form id="form_adiciona_carrinho" method="post" class="p-5 text-center d-flex flex-column justify-content-between align-itens-center">
-
-                    <h1 class="fs-5" id="nome_produto"></h1>
-                    <p class="text-success fw-bold my-4" style="font-size: 2.5em;" id="preco_produto">R$</p>
-                    <p class="fs-6 text-secondary" id="descricao_produto"></p>
-
-                    <div class="d-flex justify-content-center">
-
-                        <input type="hidden" id="id_produto" name="id_produto">
-                        <input type="number" value="0" name="qtd_produto" class="form-control me-2" style="width: 5em;">
-                        <button class="btn btn-danger ms-2" type="submit">Adicionar ao Carrinho</button>
-
-                    </div>
-
-                </form>
 
             </div>            
     
         </div>
     </div>
     
+    <script src="../js/busca_carrinho.js"></script>
     <script src="../js/loadNavbar.js"></script>
-    <script src="../js/form_add_item_carrinho.js"></script>
     <script src="../js/verifica_token.js"></script>
     <script src="../js/logout.js"></script>
     <script src="../js/privelegios_admin.js"></script>
-    <script src="../js/dados_produto_name.js"></script>
 </body>
 </html>

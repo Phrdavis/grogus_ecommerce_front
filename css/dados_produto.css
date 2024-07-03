@@ -16,7 +16,8 @@ body{
 
     width: 100%;
     max-width: 73em;
-    height: auto;
+    height: 100%;
+    max-height: 30em;
     margin-top: 3em;
     background-color: #2f2841;
 
@@ -26,12 +27,13 @@ body{
 
     width: 50%;
     max-width: 30em;
-    height: 100%;
 
 }
 
 #img-principal{
 
-    width: 100%;
+    width: 100%!important;
+    height: 100%;
+    object-fit: cover;
 
 }
